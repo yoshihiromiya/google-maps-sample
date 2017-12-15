@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!--
+    <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css" rel="stylesheet" type="text/css" media="screen"/>
+    <style type="text/css">
+     body { margin:0; padding:0; }
+     #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKRsHEnaElbqSkJf81c_yrq7TbbshSN6g"></script>
+    <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>Campfire</title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
